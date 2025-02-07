@@ -60,39 +60,48 @@ Each of the following R chunks will cause an error and / or do the desired task 
 1.  Create vectors containing the upper case letters, lower case letters, and some punctuation marks. add a label that indicate this code chunk creates the vectors of letters and punctuation.
 
 ```{r}
-
+#| label: correction-comma
+# Vectors containing the upper case letters, lower case letters, and some 
+# punctuation marks using the object assignment '<-' 
 lower_case <- c("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
                 "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z")
 
-upper_case <- c("A", "B", "C", "D", "E", "F", "G", "H" "I", "J", "K", "L", "M",
+upper_case <- c("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
                 "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z")
 
 punctuation <- c(".", ",", "!", "?", "'", '"', "(", ")", " ", "-", ";", ":")
-
 ```
 
 2.  Make **one** long **vector** containing all the symbols.
 
 ```{r}
-my_symbols <- (lower_case, upper_case, punctuation)
+#| label: correction-added-'c()'
+# Vector containing all the symbols: lower_case, upper_case, punctuation
+my_symbols <- c(lower_case, upper_case, punctuation)
 ```
 
 3.  Turn the `my_symbols` vector into a data frame, with one column named "symbol".
 
 ```{r}
-my_symbols <- dataframe(symbol = my_symbols)
+#| label: correction-added-'.'
+# Turning vector into a data frame, having one column named "symbol".
+my_symbols <- data.frame(symbol = my_symbols)
 ```
 
 4.  Find the total number of symbols we have in our data frame.
 
 ```{r}
-len <- length(my_Symbols)
+#| label: correction-lower-case
+# Total number of symbols in the data frame.
+len <- length(my_symbols$symbol)
 ```
 
 5.  Create a new variable in your dataframe that assigns a number to each symbol.
 
 ```{r}
-my_symbols%Num <- 1:len
+#| label: correction-added-'$'
+# New variable in dataframe assigns a number to each symbol
+my_symbols$num <- 1:len
 ```
 
 <!-- Developer Stage your Changes, Commit, and Push to the Git Repository-->
